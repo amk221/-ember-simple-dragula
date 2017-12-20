@@ -1,7 +1,7 @@
 {{yield (hash
   container=(component "x-dragula-container"
     drake=drake
-    on-init=(action "addChild")
+    on-insert=(action "addChild")
     on-destroy=(action "removeChild")
   )
 )}}

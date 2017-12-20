@@ -5,9 +5,9 @@ export default Component.extend({
   layout,
   classNames: ['x-dragula-container'],
 
-  init() {
+  didInsertElement() {
     this._super(...arguments);
-    this.get('on-init')(this);
+    this.get('on-insert')(this);
   },
 
   willDestroyElement() {

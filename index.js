@@ -9,5 +9,6 @@ module.exports = {
 
     app.import('node_modules/dragula/dist/dragula.js');
     app.import('vendor/shims/dragula.js');
+    app.import('node_modules/dragula/dist/dragula.css');
   }
 };
