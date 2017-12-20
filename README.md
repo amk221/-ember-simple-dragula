@@ -11,7 +11,7 @@ https://amk221.github.io/ember-simple-dragula
 See https://github.com/bevacqua/dragula#dragulacontainers-options for the available options.
 
 ```handlebars
-{{#x-dragula as |d|}}
+{{#x-dragula on-drop=(action "dropped") as |d|}}
   {{#d.container tagName="ul"}}
     <li>Item 1</li>
     <li>Item 2</li>
@@ -26,9 +26,10 @@ See https://github.com/bevacqua/dragula#dragulacontainers-options for the availa
 {{/x-dragula}}
 ```
 
-## Note
+## Notes
 
-This addon is not used in production, it was just an experiment to test out Dragula
+* This addon is not used in production, it was just an experiment to test out Dragula
+* Also see Sortable.js version https://github.com/amk221/ember-simple-sortable
 
 ### Installation
 ```
