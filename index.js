@@ -8,5 +8,6 @@ module.exports = {
     this._super.included.apply(this, arguments);
 
     app.import('node_modules/dragula/dist/dragula.js');
+    app.import('vendor/shims/dragula.js');
   }
 };

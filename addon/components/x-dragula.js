@@ -1,6 +1,6 @@
 import Component from '@ember/component';
 import layout from '../templates/components/x-dragula';
-// import dragula from 'dragula';
+import dragula from 'dragula';
 import { assign } from '@ember/polyfills';
 import { run } from '@ember/runloop';
 
@@ -9,7 +9,7 @@ export default Component.extend({
 
   init() {
     this._super(...arguments);
-    this.set('drake', window.dragula([], assign({}, this.get('options'))));
+    this.set('drake', dragula([], assign({}, this.get('options'))));
   },
 
   willDestroyElement() {
