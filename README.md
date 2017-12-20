@@ -11,12 +11,18 @@ https://amk221.github.io/ember-simple-dragula
 See https://github.com/bevacqua/dragula#dragulacontainers-options for the available options.
 
 ```handlebars
-{{#x-dragula}}
-  <li>Item 1</li>
-  <li>Item 2</li>
-  <li>Item 3</li>
-  <li>Item 4</li>
-  <li>Item 5</li>
+{{#x-dragula as |d|}}
+  {{#d.container tagName="ul"}}
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+  {{/d.container}}
+
+  {{#d.container tagName="ul"}}
+    <li>Item 4</li>
+    <li>Item 5</li>
+    <li>Item 6</li>
+  {{/d.container}}
 {{/x-dragula}}
 ```
 
