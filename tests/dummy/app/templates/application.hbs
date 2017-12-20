@@ -1,9 +1,9 @@
-<div class="lists">
+{{#x-dragula class="lists" as |d|}}
   {{#each lists as |list index|}}
-    {{#x-dragula tagName="ul"}}
+    {{#d.container tagName="ul"}}
       {{#each list as |item|}}
         <li>{{item}}</li>
       {{/each}}
-    {{/x-dragula}}
+    {{/d.container}}
   {{/each}}
-</div>
+{{/x-dragula}}

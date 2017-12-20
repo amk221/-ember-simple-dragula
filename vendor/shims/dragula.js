@@ -3,10 +3,10 @@
     'use strict';
 
     return {
-      'default': self['Dragula'],
+      'default': self['dragula'],
       __esModule: true,
     };
   }
 
-  define('Dragula', [], vendorModule);
+  define('dragula', [], vendorModule);
 })();
