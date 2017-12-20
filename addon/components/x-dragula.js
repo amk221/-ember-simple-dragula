@@ -6,6 +6,7 @@ import { run } from '@ember/runloop';
 
 export default Component.extend({
   layout,
+  classNames: ['x-dragula'],
 
   init() {
     this._super(...arguments);
