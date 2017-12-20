@@ -1,0 +1,9 @@
+<div class="lists">
+  {{#each lists as |list index|}}
+    {{#x-dragula tagName="ul"}}
+      {{#each list as |item|}}
+        <li>{{item}}</li>
+      {{/each}}
+    {{/x-dragula}}
+  {{/each}}
+</div>
