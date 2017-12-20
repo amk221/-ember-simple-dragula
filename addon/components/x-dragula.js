@@ -2,7 +2,19 @@ import Component from '@ember/component';
 import layout from '../templates/components/x-dragula';
 import dragula from 'dragula';
 import { assign } from '@ember/polyfills';
-import { run } from '@ember/runloop';
+import { run, bind } from '@ember/runloop';
+
+const events = [
+  'drag',
+  'dragend',
+  'drop',
+  'cancel',
+  'remove',
+  'shadow',
+  'over',
+  'out',
+  'cloned'
+];
 
 export default Component.extend({
   layout,
@@ -10,12 +22,27 @@ export default Component.extend({
 
   init() {
     this._super(...arguments);
-    this.set('drake', dragula([], assign({}, this.get('options'))));
+
+    const drake = dragula([], assign({}, this.get('options')));
+
+    this.set('drake', drake);
+
+    events.forEach(name => {
+      drake.on(name, bind(this, '_fireAction', name));
+    });
   },
 
   willDestroyElement() {
     this._super(...arguments);
     this.get('drake').destroy();
+  },
+
+  _fireAction() {
+    const [name, ...args] = arguments;
+    const action = this.get(`on-${name}`);
+    if (typeof action === 'function') {
+      action(...args);
+    }
   },
 
   actions: {

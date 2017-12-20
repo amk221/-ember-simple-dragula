@@ -22,9 +22,10 @@ export default Controller.extend({
   },
 
   actions: {
-    addedToList(to, event) {
-      const $list = jQuery(event.from);
-      const from = $list.index();
+    addedToList(el, target, source, sibling) {
+      const from = jQuery(target).index();
+      const to = jQuery(source).index();
+      // const $to = $list.index();
 
       console.log('added', 'from', from, 'to', to);
     }

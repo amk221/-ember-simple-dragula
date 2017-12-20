@@ -1,4 +1,4 @@
-{{#x-dragula class="lists" as |d|}}
+{{#x-dragula class="lists" on-drop=(action "addedToList") as |d|}}
   {{#each lists as |list index|}}
     {{#d.container tagName="ul"}}
       {{#each list as |item|}}
