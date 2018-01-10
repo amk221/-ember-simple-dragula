@@ -1,5 +1,5 @@
 {
-  "name": "ember-simple-dragula",
+  "name": "-ember-simple-dragula",
   "version": "0.0.0",
   "description": "A simple wrapper for Dragula",
   "directories": {
@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/amk221/ember-simple-dragula.git"
+    "url": "https://github.com/amk221/-ember-simple-dragula.git"
   },
   "engines": {
     "node": "^4.5 || 6.* || >= 7.*"
@@ -55,10 +55,10 @@
   ],
   "ember-addon": {
     "configPath": "tests/dummy/config",
-    "demoURL": "https://amk221.github.io/ember-simple-dragula"
+    "demoURL": "https://amk221.github.io/-ember-simple-dragula"
   },
   "bugs": {
-    "url": "https://github.com/amk221/ember-simple-dragula/issues"
+    "url": "https://github.com/amk221/-ember-simple-dragula/issues"
   },
-  "homepage": "https://github.com/amk221/ember-simple-dragula"
+  "homepage": "https://github.com/amk221/-ember-simple-dragula"
 }
